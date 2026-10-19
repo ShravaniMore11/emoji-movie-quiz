@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emoji Movie Quiz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="game-container">
+
+        <!--Welcome Screen-->
+        <section id="welcome-screen" class="screen active">
+            <div class="logo">🎬</div>
+            <p class="tagline">The ultimate movie Challenge</p>
+            <h1>Guess the<span>Movie!</span></h1>
+
+            <p class="description">
+                Decode the emojis, guess the movie,
+                and prove that you're a true movie fan!
+            </p>
+
+            <div class="game-info">
+                <div class="info-card">
+                    <span>🎯</span>
+                    <p>10 Questions</p>
+                </div>
+
+                <div class="info-card">
+                    <span>⏱️</span>
+                    <p>15 Seconds</p>
+                </div>
+
+                <div class="info-card">
+                    <span>🏆</span>
+                    <p>Beat Your Score</p>
+                </div>
+            </div>
+
+            <label for="category">Choose Your Category</label>
+            <select id="category">
+                <option value="mixed">🍿 All Movies</option>
+                 <option value="bollywood">❤️ Bollywood</option>
+                <option value="hollywood">🌎 Hollywood</option>
+            </select>
+
+            <button id="start-btn" class="primary-btn">
+                Start Game <span>→</span>
+            </button>
+
+              <p class="footer-text">
+                Made for movie lovers, by movie lovers ❤️
+            </p>
+        </section>
+
+        <!-- Quiz Screen -->
+        <section id="quiz-screen" class="screen">
+
+            <div class="quiz-header">
+                <button id="quit-btn" class="quit-btn">← Quit</button>
+
+                <div class="score-box">
+                    ⭐ Score: <span id="score">0</span>
+                </div>
+            </div>
+
+            <div class="progress-info">
+                <span id="question-number">QUESTION 1 / 10</span>
+                <span id="timer">⏱️ 15s</span>
+            </div>
+
+            <div class="progress-bar">
+                <div id="progress-fill"></div>
+            </div>
+
+            <div class="question-card">
+
+                <p class="question-label">DECODE THESE EMOJIS</p>
+
+                <div id="emoji-clue" class="emoji-clue">
+                    🧙 ⚡ 🏰
+                </div>
+
+                <h2>Which movie is this?</h2>
+
+                <p class="question-subtitle">
+                    Choose the correct answer below.
+                </p>
+
+            </div>
+
+            <div id="options" class="options-container">
+                <!-- Answer buttons will be created by JavaScript -->
+            </div>
+
+            <div id="feedback" class="feedback" aria-live="polite"></div>
+
+            <div class="quiz-actions">
+                <button id="hint-btn" class="secondary-btn">
+                    💡 Get a Hint
+                </button>
+
+                <button id="next-btn" class="primary-btn" disabled>
+                    Next Question →
+                </button>
+            </div>
+
+            <p id="hint-text" class="hint-text"></p>
+
+        </section>
+
+
+        <!-- Result Screen -->
+        <section id="result-screen" class="screen">
+
+            <div id="result-emoji" class="result-emoji">🏆</div>
+
+            <p class="tagline">QUIZ COMPLETED</p>
+
+            <h1 id="result-title">Amazing Job!</h1>
+
+            <p id="result-message">
+                You've completed the movie challenge!
+            </p>
+
+            <div class="result-card">
+                <p>YOUR FINAL SCORE</p>
+
+                <div class="final-score">
+                    <span id="final-score">0</span>
+                    <span class="score-total">/ 100</span>
+                </div>
+
+                <p id="correct-count">0 out of 10 correct answers</p>
+            </div>
+
+            <button id="restart-btn" class="primary-btn">
+                Play Again ↻
+            </button>
+
+            <p class="footer-text">
+                Thanks for playing! 🍿
+            </p>
+
+        </section>
+
+    </div>
+
+    <!-- Connect JavaScript file -->
+    <script src="script.js"></script>
+</body>
+</html>
