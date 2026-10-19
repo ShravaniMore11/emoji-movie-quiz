@@ -245,7 +245,7 @@ function checkAnswer(selectedAnswer, selectedButton) {
     });
 
     if (selectedAnswer === currentQuestion.movie) {
-        score += 10;
+        score += 20;
         correctAnswers++;
 
         feedback.textContent = "🎉 Correct! Great job!";
